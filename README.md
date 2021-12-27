@@ -1,6 +1,5 @@
 # Project_NN
 Creation of a neural network form scratch by me as an introduction to the world of AI.
-<<<<<<< HEAD
 
 As a heads up for the reader I started this project not with the intent of creating a state 
 of the art neural network; the classes and functions in the tools folder form by no means 
@@ -21,5 +20,4 @@ correctly labeling a smaller and larger circle. Next, the mnist variant applies 
 the notorious mnist set. The "_trainer" files are able to generate the necessary weights and 
 biases. In the case you do not want to go to the trouble of finding these yourself the 
 "_application" files use already found values and directly show the performance on the tests.
-=======
->>>>>>> d16ad58a4d1b1ea006c7827c953d6240b11c0f4b
+
