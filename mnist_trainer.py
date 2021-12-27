@@ -4,6 +4,7 @@ import numpy as np
 from tqdm import tqdm
 from sklearn.preprocessing import normalize
 from matplotlib import pyplot as plt
+np.set_printoptions(precision=3)
 
 mnist_train = torchvision.datasets.MNIST(r"mnist_data",train=True)
 mnist_train_data = mnist_train.train_data.numpy()
