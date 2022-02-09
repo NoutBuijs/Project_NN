@@ -2,6 +2,7 @@ import torchvision
 from Tools import NeuralNetwork as NN
 import numpy as np
 from sklearn.preprocessing import normalize
+from matplotlib import pyplot as plt
 np.set_printoptions(precision=3)
 
 mnist_test = torchvision.datasets.MNIST(r"mnist_data",train=False)
@@ -35,9 +36,11 @@ for i in range(np.shape(test)[0]):
     if output[i] != mnist_test_labels[i]:
         mistakes.append(i)
 
-print(f"grade: {len(mistakes)/np.size(mnist_test_labels)}")
+print(f"Performance Mistakes/Total [%]: {len(mistakes)/np.size(mnist_test_labels)*100}")
+
+mnist_test_data = mnist_test.test_data.numpy()
 
 # generate plot of mnist figure at idx
-# idx = 7777
-# plt.imshow(mnist_train_data[idx],cmap="gray")
-# print(mnist_train_labels[idx])
+# idx = mistakes[0]
+# plt.imshow(mnist_test_data[idx],cmap="gray")
+# print("Answer: ", mnist_test_labels[idx], "\nNN output: ", output[idx])
